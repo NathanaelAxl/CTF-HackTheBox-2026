@@ -1,6 +1,6 @@
 # [AI/ML] Mement0 — CTF Writeup
 
-## 📋 Deskripsi Soal
+## Deskripsi Soal
 
 > **Scenario Name:** Mement0
 >
@@ -11,7 +11,7 @@ Singkatnya: kita diberi sebuah repo Git berisi "situs statis" yang isinya di-gen
 File yang diberikan:
 - `a24bbed1-...zip` — berisi sebuah folder `memento/` lengkap dengan riwayat Git (`.git/`).
 
-## 🛠️ Tools yang Dipakai
+## Tools yang Dipakai
 
 | Tool | Kegunaan |
 |---|---|
@@ -23,7 +23,7 @@ File yang diberikan:
 
 Tidak ada tool eksotis di sini — hanya Git dan Python standar. Yang penting adalah *ke mana* kita mencari informasinya.
 
-## 🚶 Step-by-Step Penyelesaian
+## Step-by-Step Penyelesaian
 
 ### 1. Ekstrak dan kenali struktur repo
 
@@ -196,9 +196,9 @@ Output:
 HTB{sk1lls_st1ll_pr3ss_th3_m4rk}
 ```
 
-🚩 **Flag ditemukan!**
+**Flag ditemukan!**
 
-## ✅ Kesimpulan
+## Kesimpulan
 
 Challenge **Mement0** ini secara elegan mensimulasikan skenario nyata: sebuah AI coding agent yang **memori dan skill-nya diracuni (memory/skill poisoning)** oleh instruksi tersembunyi, sehingga agen terus menjalankan perilaku berbahaya (menyisipkan beacon eksfiltrasi ke setiap file yang dia hasilkan) meskipun "resep" aslinya sudah dihapus dari daftar skill yang aktif.
 
