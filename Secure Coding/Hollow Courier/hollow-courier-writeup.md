@@ -23,7 +23,7 @@ Singkatnya: ada endpoint internal (`/gate/decree`) yang seharusnya **hanya** bis
 
 ---
 
-## 🛠️ Tools yang Dipakai
+## Tools yang Dipakai
 
 | Tool | Kegunaan |
 |---|---|
@@ -36,7 +36,7 @@ Singkatnya: ada endpoint internal (`/gate/decree`) yang seharusnya **hanya** bis
 
 ---
 
-## 🔍 Step-by-Step Penyelesaian
+## Step-by-Step Penyelesaian
 
 ### 1. Clone repository
 
@@ -368,7 +368,7 @@ curl.exe -s http://[IP]:[PORT]/flag
 
 ---
 
-## 🎯 Kesimpulan
+## Kesimpulan
 
 Kerentanan pada challenge ini adalah **spoofing IP klien melalui header `X-Forwarded-For`**, akibat dua kesalahan konfigurasi yang saling memperparah satu sama lain di batas antara reverse proxy (Caddy) dan aplikasi backend (Flask):
 
@@ -383,6 +383,3 @@ Kombinasi keduanya membuat siapa pun dari luar bisa **menyamar sebagai service i
 - **Reverse proxy harus menjadi satu-satunya sumber kebenaran** untuk identitas IP client — ia harus selalu menimpa/menambahkan header tersebut berdasarkan koneksi TCP yang sebenarnya, bukan sekadar meneruskan apa yang dikirim client.
 - **Testing lokal via Docker Desktop di Windows bisa menyesatkan** untuk kasus seperti ini karena lapisan NAT tambahan; melakukan pengujian dari dalam container sendiri memberi hasil yang lebih representatif terhadap kondisi produksi.
 
----
-
-*Writeup ini dibuat untuk tujuan pembelajaran dan dokumentasi pribadi.*
